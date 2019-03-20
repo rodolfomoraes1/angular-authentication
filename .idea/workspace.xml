@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="769b928e-af7f-4ec0-ae4f-aaba0b17f59a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-client/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/auth-client/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-client/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/auth-client/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/auth-client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/auth-client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-client/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/auth-client/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-client/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/auth-client/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/auth-client/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-client/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/auth-client/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-client/teste.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,10 +34,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/auth-client/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="17">
+                <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -89,6 +82,7 @@
         <option value="$PROJECT_DIR$/auth-client/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/auth-client/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/auth-client/.gitignore" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -111,11 +105,6 @@
               <item name="angular-authentication" type="b2602c69:ProjectViewProjectNode" />
               <item name="angular-authentication" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="angular-authentication" type="b2602c69:ProjectViewProjectNode" />
-              <item name="angular-authentication" type="462c0819:PsiDirectoryNode" />
-              <item name="auth-client" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -127,7 +116,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553050395810" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553050596755" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -164,12 +153,12 @@
       <workItem from="1552962297965" duration="585000" />
       <workItem from="1553036407668" duration="3327000" />
       <workItem from="1553046995595" duration="1494000" />
-      <workItem from="1553049639497" duration="748000" />
+      <workItem from="1553049639497" duration="947000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9928000" />
+    <option name="totallyTimeSpent" value="10127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -399,6 +388,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/auth-client/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth-client/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/auth-client/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -406,10 +410,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auth-client/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="17">
+            <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

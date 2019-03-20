@@ -1,5 +1,5 @@
 # Simple app using token based auth
-Project developed using:
+Project under development using:
 - Node
 - Express
 - Body-parser
