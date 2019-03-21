@@ -3,6 +3,7 @@ Project under development using:
 - Node
 - Express
 - Body-parser
+- Cors
 - Mongo
 - Mongoose
 - Json Web Token (JWT)
