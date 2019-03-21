@@ -11,21 +11,16 @@ export class LoginComponent implements OnInit {
 
   loginUserData = {};
 
-  constructor(private _authService: AuthService,
-              private _router: Router) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() { }
 
   loginUser() {
-    this._authService.loginUser(this.loginUserData)
-      .subscribe(
+    this.authService.loginUser(this.loginUserData)
+      .then(
         res => {
-          console.log(res);
-          localStorage.setItem('token', res.token);
-          localStorage.setItem('refresh-token', res.refreshToken);
-          this._router.navigate(['/special']);
-        },
-        err => console.log(err)
+          this.router.navigate(['/special']);
+        }
       );
   }
 }

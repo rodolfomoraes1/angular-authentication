@@ -1,24 +1,40 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
+import {BaseHttpService} from '../base-http/base-http.service';
+import {ApiService} from '../api/api.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class AuthService extends BaseHttpService<any> {
 
-  private _registerUrl = 'http://localhost:3000/api/register';
-  private _loginUrl = 'http://localhost:3000/api/login';
-  private _refreshToken = 'http://localhost:3000/api/refreshToken';
+  private registerUrl = 'register/';
+  private loginUrl = 'login/';
+  private refreshToken = 'refreshToken/';
 
-  constructor(private _http: HttpClient, private _router: Router) { }
+  constructor(public http: HttpClient, api: ApiService, private router: Router) {
+    super(http, api.getServerUrl(), api);
+  }
 
   registerUser(user) {
-    return this._http.post<any>(this._registerUrl, user);
+    return this.post(this.registerUrl, user, this.handleError).then(
+      res => {
+        this.storeTokens(res.token, res.refreshToken);
+      }, err => {
+        console.error(`Error to register user! ${err}`);
+      }
+    );
   }
 
   loginUser(user) {
-    return this._http.post<any>(this._loginUrl, user);
+    return this.post(this.loginUrl, user, this.handleError).then(
+      res => {
+        this.storeTokens(res.token, res.refreshToken);
+      }, err => {
+        console.error(`Error to login user! ${err}`);
+      }
+    );
   }
 
   loggedIn() {
@@ -28,7 +44,11 @@ export class AuthService {
   logoutUser() {
     localStorage.removeItem('token');
     localStorage.removeItem('refresh-token');
-    this._router.navigate(['/login']);
+    this.router.navigate(['/login']);
+  }
+
+  refreshAuthToken() {
+    return this.get(this.refreshToken, this.handleError);
   }
 
   getToken() {
@@ -39,7 +59,13 @@ export class AuthService {
     return localStorage.getItem('refresh-token');
   }
 
-  refreshAuthToken() {
-    return this._http.get<any>(this._refreshToken);
+  storeTokens(token, refreshToken) {
+    localStorage.setItem('token', token);
+    localStorage.setItem('refresh-token', refreshToken);
+  }
+
+  protected handleError(error: any): Promise<any> {
+    console.error(`Auth service error: ${error.message}`);
+    return Promise.reject(error.message || error);
   }
 }

@@ -1,41 +1,30 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {BaseHttpService} from '../base-http/base-http.service';
+import {ApiService} from '../api/api.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EventService {
+export class EventService extends BaseHttpService<any> {
 
-  eventsUrl = 'http://localhost:3000/api/events'
-  specialUrl = 'http://localhost:3000/api/special'
+  private eventsUrl = 'events/'
+  private specialUrl = 'special/'
 
-  // eventsUrl = 'events'
-  // specialUrl = 'special'
-  // url = 'http://localhost:3000/api';
-
-  // constructor(url: string, http: HttpClient) {
-  //   super('http://localhost:3000/api', http);
-  // }
-
-  constructor(private _http: HttpClient) { }
+  constructor(public http: HttpClient, api: ApiService) {
+    super(http, api.getServerUrl(), api);
+  }
 
   getEvents() {
-    // return this.get(this.eventsUrl);
-
-    return this._http.get<any>(this.eventsUrl)
-      .toPromise()
-      .then(response => {
-        return response;
-      }).catch();
+    return this.get(this.eventsUrl, this.handleError);
   }
 
   getSpecialEvents() {
-    // return this.get(this.specialUrl);
+    return this.get(this.specialUrl, this.handleError);
+  }
 
-    return this._http.get<any>(this.specialUrl)
-      .toPromise()
-      .then(response => {
-        return response;
-      }).catch();
+  protected handleError(error: any): Promise<any> {
+    console.error(`Events service error: ${error.message}`);
+    return Promise.reject(error.message || error);
   }
 }

@@ -12,16 +12,17 @@ export class SpecialEventsComponent implements OnInit {
 
   specialEvents = [];
 
-  constructor(private _eventService: EventService, private _router: Router) { }
+  constructor(private eventService: EventService, private router: Router) { }
 
   ngOnInit() {
-    this._eventService.getSpecialEvents().then(
+    this.eventService.getSpecialEvents()
+      .then(
       res => this.specialEvents = res
     ).catch(
       err => {
         if (err instanceof HttpErrorResponse) {
           if (err.status === 500 || err.status === 401) {
-            this._router.navigate(['/login']);
+            this.router.navigate(['/login']);
           }
         }
       }

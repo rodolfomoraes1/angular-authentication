@@ -79,7 +79,7 @@ export class TokenInterceptorService implements HttpInterceptor {
         break;
       case 'Token is expired':
         this._authService.refreshAuthToken()
-          .subscribe(
+          .then(
             res => {
               console.log(res);
               localStorage.setItem('token', res.token);

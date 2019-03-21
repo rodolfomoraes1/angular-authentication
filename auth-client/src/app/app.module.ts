@@ -13,6 +13,7 @@ import {AuthGuard} from './guards/auth/auth.guard';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {TokenInterceptorService} from './services/token-interceptor/token-interceptor.service';
 import {FormsModule} from '@angular/forms';
+import {ApiService} from './services/api/api.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,11 @@ import {FormsModule} from '@angular/forms';
     FormsModule,
     HttpClientModule
   ],
-  providers: [AuthService, AuthGuard, EventService,
+  providers: [
+    ApiService,
+    AuthService,
+    AuthGuard,
+    EventService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,
