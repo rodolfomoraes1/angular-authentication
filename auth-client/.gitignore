@@ -13,8 +13,8 @@
 # package-lock
 package-lock.json
 
-#idea settings
-.idea/workspace.xml
+#idea metadata
+.idea
 
 # profiling files
 chrome-profiler-events.json
