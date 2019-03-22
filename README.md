@@ -9,6 +9,7 @@ Project under development using:
 - Json Web Token (JWT)
 - Angular
 - Angular/CLI
+- Bootstrap 4
 
 ## Table of Contents
 
