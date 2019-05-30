@@ -1,5 +1,7 @@
+# This project is under development. ASAP I will update the architecture and implement a few features, such as refresh token auth, SEO, acessibility for screen readers, offline first concept and encryption.
+
+
 # Simple app using token based auth
-Project under development using:
 - Node
 - Express
 - Body-parser
@@ -21,10 +23,10 @@ Project under development using:
 The project is under development. This file will be updated asap.
 
 ### Run
-
+The project is under development. This file will be updated asap.
 
 ## Features Developed
-
+The project is under development. This file will be updated asap.
 
 ## Authors
 This project was developed by Rodolfo Moraes Martins.
